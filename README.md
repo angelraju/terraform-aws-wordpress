@@ -45,7 +45,8 @@ It allows the SSH connection originates Bastion server security group and MySQL 
 
 1. Terraform if you don't have it already you can Download it here
   https://developer.hashicorp.com/terraform/downloads
-2.need to have an IAM user with programmatic access with AmazonEc2FullAccess and AmazonRoute53FullAccess, create security credentials(AccessKey, SecretKey)
+  
+2. need to have an IAM user with programmatic access with AmazonEc2FullAccess and AmazonRoute53FullAccess, create security credentials(AccessKey, SecretKey)
 
 ## You will create the following AWS resources in this below section:
 
@@ -81,7 +82,7 @@ It allows the SSH connection originates Bastion server security group and MySQL 
 ```
 
 ### Step 2
--creating esscential variables needed for this project and using this variables we are accesing most of the resources;
+-creating variable.tf file with varaibles needed for this project and using this variables we are accesing most of the resources;
 
 ````
 variable "project" {
@@ -212,7 +213,7 @@ userdata script for both frontend-webserver and DB-backend server while lauching
 ````
 ### Step 5
 
-Creating VPC.
+Creating VPC and its main file content
 
 1. Create a VPC with a 172.16.0.0/16 CIDR block
 
